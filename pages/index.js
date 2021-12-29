@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-// import "@fontsource/roboto";
-// import Welcome from "../components/modals/welcome";
+
 import { useDispatch } from "react-redux";
 import Meta from "../components/Meta";
 import { changeData } from "../redux/data";
 import initialize from "../utilities/initialize";
+import homeStyles from "../styles/Home.module.css";
 
 /*YOLO: assign key to children across all pages*/
 /*convert price to english*/
@@ -30,23 +30,26 @@ function Home() {
         title="Japan Drug Database"
         description="Japan Drug Database is a compilation of all drugs that are approved in Japan, indications of drugs, and their manufacturers."
       />
-      <img
-        src="./main.jpg"
-        style={{
-          position: "absolute",
-          width: "100vw",
-          height: "100vh",
-          top: 0,
-          left: 0,
-          objectPosition: "right",
-          objectFit: "cover",
-          zIndex: -10,
-        }}
-      ></img>
-      <span>
-        Please search for a drug, disease or pharma company using the search
-        field above
-      </span>
+      <div className={homeStyles.welcome}>
+        <img
+          src="./main.jpg"
+          style={{
+            position: "absolute",
+            width: "100vw",
+            height: "100vh",
+            top: 0,
+            left: 0,
+            objectPosition: "right",
+            objectFit: "cover",
+            zIndex: -10,
+          }}
+        ></img>
+              </div>
+
+        <span>
+          Please search for a drug, disease or pharma company using the search
+          field above
+        </span>
     </>
   );
 }
