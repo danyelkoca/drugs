@@ -38,7 +38,7 @@ function Home() {
           height: "100vh",
           top: 0,
           left: 0,
-          objectPosition: "right top",
+          objectPosition: "right",
           objectFit: "cover",
           zIndex: -10,
         }}
