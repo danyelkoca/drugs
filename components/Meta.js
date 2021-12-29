@@ -6,13 +6,17 @@ const Meta = ({ title, keywords, description }) => {
   return (
     <Head>
       <meta
+        name="google-site-verification"
+        content="xdkQxVkQHLojk15yZskf4NOt8_xedCpBebo9R_IzvKI"
+      />
+      <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
       ></meta>
       <meta name="keywords" content={keywords}></meta>
       <meta name="description" content={description}></meta>
       <meta charSet="utf-8"></meta>
-      <meta rel="icon" href="/icon.png"></meta>
+      <link rel="shortcut icon" href="/icon.png" />
       <title>{title}</title>
     </Head>
   );
@@ -21,7 +25,7 @@ const Meta = ({ title, keywords, description }) => {
 Meta.defaultProps = {
   title: "Japan Drug Database",
   keywords:
-    "Japan, healthcare, life sciences, drugs, pharma companies, indications, MSD, Pfizer, Novartis, Danyel Koca, Danyel, Koca",
+    "Japan, healthcare, life sciences, drugs, pharma companies, indications, MSD, Pfizer, Novartis, Sanofi, GSK, Danyel Koca, Danyel, Koca",
   description:
     "Japan Drug Database is a compilation of all drugs that are approved in Japan, with information about the approved indications, manufacturing companies, and drug prices.",
 };

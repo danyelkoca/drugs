@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <Meta
-        title="Japan Durg Database - About"
+        title="Japan Drug Database - About"
         description="Japan Drug Database is a platform for patients, healthcare professionals, and researchers to access Japan Healthcare data in a systematic and efficient way."
       ></Meta>
       <div

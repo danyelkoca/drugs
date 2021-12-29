@@ -48,7 +48,7 @@ const Footnote = () => {
         justifyContent: "center",
         alignItems: "center",
         zIndex: 3,
-        background: "rgba(255,255,255,0.9)",
+        background: "rgba(255,255,255,0.7)",
       }}
     >
       <p>
