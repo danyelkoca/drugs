@@ -12,7 +12,7 @@ const Meta = ({ title, keywords, description }) => {
       <meta name="keywords" content={keywords}></meta>
       <meta name="description" content={description}></meta>
       <meta charSet="utf-8"></meta>
-      <meta rel="icon" href="/favicon.ico"></meta>
+      <meta rel="icon" href="/icon.png"></meta>
       <title>{title}</title>
     </Head>
   );
