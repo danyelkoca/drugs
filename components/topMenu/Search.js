@@ -26,13 +26,27 @@ const Search = () => {
     <div style={{ maxWidth: 500, flexGrow: 1 }}>
       <Autocomplete
         id="grouped-demo"
+        blurOnSelect={true}
         options={options}
         getOptionLabel={(o) =>
           options.length > 0 ? data[o[0]][o[1]]["en"]["name"] : null
         }
+        renderOption={(o) => (
+          <div
+            style={{
+              textOverflow: "ellipsis",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {options.length > 0 ? data[o[0]][o[1]]["en"]["name"] : null}
+          </div>
+        )}
         groupBy={(o) => mapper[o[0]]}
         onChange={(e, newValue) => {
-          router.push(`/${mapper[newValue[0]].toLowerCase()}/${newValue[1]}`);
+          if (newValue) {
+            router.push(`/${mapper[newValue[0]].toLowerCase()}/${newValue[1]}`);
+          }
         }}
         renderInput={(params) => (
           <TextField

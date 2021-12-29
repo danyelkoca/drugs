@@ -48,8 +48,12 @@ export default function Navbar() {
     <div
       style={{
         display: "flex",
-        padding: "10px 20px",
+        padding: "0px 20px",
+        height: 80,
+        alignItems: "center",
         borderBottom: "1px solid rgba(0,0,0,0.3)",
+        zIndex: 3,
+        background: "rgba(255,255,255,0.9)",
       }}
     >
       <div

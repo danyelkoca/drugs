@@ -30,10 +30,23 @@ function Home() {
         title="Japan Drug Database"
         description="Japan Drug Database is a compilation of all drugs that are approved in Japan, indications of drugs, and their manufacturers."
       />
-      <div>
+      <img
+        src="./main.jpg"
+        style={{
+          position: "absolute",
+          width: "100vw",
+          height: "100vh",
+          top: 0,
+          left: 0,
+          objectPosition: "right top",
+          objectFit: "cover",
+          zIndex: -10,
+        }}
+      ></img>
+      <span>
         Please search for a drug, disease or pharma company using the search
         field above
-      </div>
+      </span>
     </>
   );
 }

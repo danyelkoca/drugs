@@ -11,7 +11,7 @@ import {
   FacebookShareButton,
   LineShareButton,
   WhatsappShareButton,
-} from "react-share";
+} from "next-share";
 
 import {
   EmailIcon,
@@ -20,7 +20,7 @@ import {
   FacebookMessengerIcon,
   LineIcon,
   WhatsappIcon,
-} from "react-share";
+} from "next-share";
 
 import { styled } from "@mui/material/styles";
 
@@ -47,6 +47,8 @@ const Footnote = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        zIndex: 3,
+        background: "rgba(255,255,255,0.9)",
       }}
     >
       <p>
@@ -74,25 +76,65 @@ const Footnote = () => {
                 }}
               >
                 <EmailShareButton
-                  subject={`Check this page out: Japan Drug Database`}
-                  body={"Yolo!"}
+                  subject={"Check this page out: Japan Drug Database"}
+                  url={"https://drugs.vercel.app/"}
+                  body={
+                    "Japan Drug Database is a compilation of all drugs that are approved in Japan, with information about the approved indications, manufacturing companies, and drug prices."
+                  }
+                  separator={"\n\n"}
                   style={{ margin: 5 }}
                 >
                   <EmailIcon size={32} round={true} />
                 </EmailShareButton>
-                <LinkedinShareButton style={{ margin: 5 }}>
+                <LinkedinShareButton
+                  title={"Check this page out: Japan Drug Database"}
+                  summary={
+                    "Japan Drug Database is a compilation of all drugs that are approved in Japan, with information about the approved indications, manufacturing companies, and drug prices."
+                  }
+                  source={"https://drugs.vercel.app/"}
+                  url={"https://drugs.vercel.app/"}
+                  style={{ margin: 5 }}
+                >
                   <LinkedinIcon size={32} round={true} />
                 </LinkedinShareButton>
-                <TwitterShareButton style={{ margin: 5 }}>
+                <TwitterShareButton
+                  title={"Check this page out: Japan Drug Database"}
+                  summary={
+                    "Japan Drug Database is a compilation of all drugs that are approved in Japan, with information about the approved indications, manufacturing companies, and drug prices."
+                  }
+                  hashtags={[
+                    "Japan",
+                    "Drugs",
+                    "Indications",
+                    "Pharma",
+                    "Database",
+                  ]}
+                  url={"https://drugs.vercel.app/"}
+                  style={{ margin: 5 }}
+                >
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
-                <FacebookShareButton style={{ margin: 5 }}>
+                <FacebookShareButton
+                  url={"https://drugs.vercel.app/"}
+                  style={{ margin: 5 }}
+                >
                   <FacebookMessengerIcon size={32} round={true} />
                 </FacebookShareButton>
-                <LineShareButton style={{ margin: 5 }}>
+                <LineShareButton
+                  title={
+                    "Japan Drug Database is a compilation of all drugs that are approved in Japan, with information about the approved indications, manufacturing companies, and drug prices."
+                  }
+                  url={"https://drugs.vercel.app/"}
+                  style={{ margin: 5 }}
+                >
                   <LineIcon size={32} round={true} />
                 </LineShareButton>
-                <WhatsappShareButton style={{ margin: 5 }}>
+                <WhatsappShareButton
+                  title={"Check this page out: Japan Drug Database"}
+                  url={"https://drugs.vercel.app/"}
+                  separator={"\n\n"}
+                  style={{ margin: 5 }}
+                >
                   <WhatsappIcon size={32} round={true} />
                 </WhatsappShareButton>
               </div>
@@ -103,7 +145,7 @@ const Footnote = () => {
             style={{
               color: "transparent",
               textShadow: "0 0 0 steelblue",
-              margin: "0px 10px 0px 5px",
+              margin: "0px 10px 0px 8px",
               cursor: "pointer",
             }}
           >
@@ -125,6 +167,7 @@ const Footnote = () => {
         <div style={{ textAlign: "center" }}>
           <Link
             href="https://www.linkedin.com/in/danyelkoca"
+            target="_blank"
             style={{ marginRight: 15 }}
           >
             <IconButton aria-label="LinkedIn" style={{ padding: 0 }}>
@@ -133,6 +176,7 @@ const Footnote = () => {
           </Link>
           <Link
             href="https://github.com/danyelkoca"
+            target="_blank"
             style={{ marginRight: 15 }}
           >
             <IconButton aria-label="GitHub" style={{ padding: 0 }}>
@@ -141,6 +185,7 @@ const Footnote = () => {
           </Link>
           <Link
             href="https://www.facebook.com/danyelkoca/"
+            target="_blank"
             style={{ marginRight: 15 }}
           >
             <IconButton aria-label="Facebook" style={{ padding: 0 }}>
