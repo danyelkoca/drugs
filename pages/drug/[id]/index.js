@@ -141,7 +141,11 @@ const Companies = ({ id }) => {
                     }}
                   >
                     <Typography variant="body1" color="textSecondary">
-                      {p["en"]["name"]}
+                      {p["jp"]["name"]
+                        ? p["jp"]["name"]
+                        : p["en"]["name"]
+                        ? p["en"]["name"]
+                        : "-"}
                     </Typography>
                   </th>
                   <td>
