@@ -68,7 +68,7 @@ const Disease = ({ id }) => {
           </Typography>
         </a>
       </div>
-      <Typography variant="h5" style={{ margin: "20px 0px 0px 0px" }}>
+      <Typography variant="h5" style={{ margin: "20px 0px 10px 0px" }}>
         {`Products indicated for ${diss[id]["en"]["name"]}`}
       </Typography>
       <Grid container spacing={2}>
