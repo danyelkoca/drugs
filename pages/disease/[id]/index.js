@@ -68,7 +68,9 @@ const Disease = ({ id }) => {
           </Typography>
         </a>
       </div>
-      <br />
+      <Typography variant="h5" style={{ margin: "20px 0px 0px 0px" }}>
+        {`Products indicated for ${diss[id]["en"]["name"]}`}
+      </Typography>
       <Grid container spacing={2}>
         {prods.length > 0 &&
           prods.map((p) => (
