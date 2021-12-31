@@ -104,7 +104,7 @@ const Company = ({ id }) => {
                         </th>
                         <td>
                           <Typography variant="body1">
-                            {p["en"]["act_ing"]}
+                            {p["en"]["act_ing"] ? p["en"]["act_ing"] : "-"}
                           </Typography>
                         </td>
                       </tr>
@@ -115,7 +115,9 @@ const Company = ({ id }) => {
                           </Typography>
                         </th>
                         <td>
-                          <Typography variant="body1">{p["date"]}</Typography>
+                          <Typography variant="body1">
+                            {p["date"] ? p["date"] : "-"}
+                          </Typography>
                         </td>
                       </tr>
                     </table>

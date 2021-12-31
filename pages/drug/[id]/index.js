@@ -72,7 +72,9 @@ const Companies = ({ id }) => {
             </Typography>
           </th>
           <td>
-            <Typography variant="body1">{drug["en"]["act_ing"]}</Typography>
+            <Typography variant="body1">
+              {drug["en"]["act_ing"] ? drug["en"]["act_ing"] : "-"}
+            </Typography>
           </td>
         </tr>
         <tr>
@@ -82,7 +84,9 @@ const Companies = ({ id }) => {
             </Typography>
           </th>
           <td>
-            <Typography variant="body1">{drug["date"]}</Typography>
+            <Typography variant="body1">
+              {drug["date"] ? drug["date"] : "-"}
+            </Typography>
           </td>
         </tr>
       </table>

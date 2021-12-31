@@ -76,7 +76,7 @@ const Disease = ({ id }) => {
           prods.map((p) => (
             <Grid
               item
-              sm={6}
+              xs={12}
               md={4}
               xl={3}
               style={{ flexGrow: 1, minHeight: "100%", height: "100%" }}
@@ -132,7 +132,7 @@ const Disease = ({ id }) => {
                       </th>
                       <td>
                         <Typography variant="body1">
-                          {p["en"]["act_ing"]}
+                          {p["en"]["act_ing"] ? p["en"]["act_ing"] : "-"}
                         </Typography>
                       </td>
                     </tr>
@@ -143,7 +143,9 @@ const Disease = ({ id }) => {
                         </Typography>
                       </th>
                       <td>
-                        <Typography variant="body1">{p["date"]}</Typography>
+                        <Typography variant="body1">
+                          {p["date"] ? p["date"] : "-"}
+                        </Typography>
                       </td>
                     </tr>
                   </table>
